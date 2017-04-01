@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+/**
+* @ORM\ManyToOne(targetEntity="${1:Entity}")
+* @ORM\JoinColumn(name="${2:field}", referencedColumnName="${3:ref_field}")
+*
+* @var \Application\Entity\\${1:Entity}
+*
+*/
+]]></content>
+    <tabTrigger>joindocfield</tabTrigger>
+    <!-- <scope>source.php</scope> -->
+</snippet>

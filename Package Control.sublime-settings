@@ -1,0 +1,37 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"Alignment",
+		"All Autocomplete",
+		"Alphpetize",
+		"AngularJS",
+		"AngularJS Snippets",
+		"AngularZen",
+		"Behat",
+		"CloseOtherWindows",
+		"Cucumber Completion",
+		"DocBlockr",
+		"DocBlockr_with_update_capability",
+		"Emmet",
+		"HTML-CSS-JS Prettify",
+		"JavaScriptNext - ES6 Syntax",
+		"JSHint",
+		"JSHint Gutter",
+		"Markdown Preview",
+		"Package Control",
+		"PHP Companion",
+		"Phpcs",
+		"PhpDoc",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"SqlBeautifier",
+		"Text Pastry",
+		"TrailingSpaces",
+		"TypeScript"
+	]
+}

@@ -1,0 +1,30 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(array(
+    'name' => '${1:name}',
+    'required' => ${2:false},
+    'filters' => array(
+        array(
+            'name' => 'StripTags'
+        ),
+        array(
+            'name' => 'StringTrim'
+        ),
+        array(
+            'name' => 'StringToUpper'
+        )
+    ),
+    'validators' => array(
+        array(
+            'name' => 'StringLength',
+            'options' => array(
+                'max' => ${3:size},
+                'message' => "O ${4:campo} não pode ter mais de ${3:size} caracteres"
+            )
+        )
+    )
+));
+]]></content>
+    <tabTrigger>ifstring</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

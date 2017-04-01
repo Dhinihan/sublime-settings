@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+namespace ApiTeste\Fixture;
+
+use PandoraTestes\Fixture\AbstractFixture;
+
+class ${1:FixtureName} extends AbstractFixture
+{
+    protected \$params = array();
+
+    protected \$associations = array();
+
+    protected \$traits = array();
+}
+
+]]></content>
+    <tabTrigger>fixture</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

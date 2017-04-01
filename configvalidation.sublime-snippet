@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+'zf-content-validation' => array(
+    'Api\\${1:Entidade}\Controller' => array(
+        'input_filter' => 'Application\Filter\\${1:Entidade}',
+    ),
+),
+]]></content>
+    <tabTrigger>configvalidacao</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

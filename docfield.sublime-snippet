@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @ORM\Column(type="${2:type}", name="${3:dbField}")
+ */
+protected \$${1:field};
+]]></content>
+	<tabTrigger>docfield</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

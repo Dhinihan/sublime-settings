@@ -1,0 +1,29 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(
+    array(
+        'name' => '${1:nome}',
+        'required' => ${2:false},
+        'filters' => array(
+            array(
+                'name' => 'Mask',
+                'options' => array(
+                    'mask' => "${3:mask}"
+                )
+            ),
+        ),
+        'validators' => array(
+            array(
+                'name' => 'Regex',
+                'options' => array(
+                    'pattern' => '/${3/#/\\d/g}/',
+                    'message' => 'O campo "${4:campo}" deve ter o formato "${3:mask}"'
+                )
+            ),
+        ),
+    )
+);
+]]></content>
+    <tabTrigger>ifmask</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(array(
+    'name' => '${1:name}',
+    'required' => ${2:false},
+    'filters' => array(
+        array(
+            'name' => 'StripTags'
+        ),
+        array(
+            'name' => 'StringTrim'
+        ),
+    ),
+    'validators' => array(
+        array(
+            'name' => 'Digits',
+            'options' => array(
+                'message' => "O ${4:campo} aceita apenas dígitos"
+            )
+        )
+    )
+));
+]]></content>
+    <tabTrigger>ifdigito</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

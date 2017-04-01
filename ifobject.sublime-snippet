@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(array(
+    'name' => '${1:nome}',
+    'required' => ${2:false},
+    'filters' => array(
+        array(
+            'name' => 'Entity',
+        ),
+    ),
+    'validators' => array(
+        array(
+            'name' => 'DoctrineModule\Validator\ObjectExists',
+            'options' => array(
+                'object_repository' => \$this->getEntityManager()
+                    ->getRepository('Application\Entity\\${1/(.+)/\u$1/g}'),
+                'fields' => '${3:id}',
+                'message' => '${4:campo} não encontrado',
+            ),
+        ),
+    ),
+));
+]]></content>
+    <tabTrigger>ifobject</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

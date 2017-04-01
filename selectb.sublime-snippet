@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+${3:And} I select "${1:option}" from "${2:field}"
+]]></content>
+    <tabTrigger>selectb</tabTrigger>
+    <description>When I select "option" from "field"</description>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+"""
+{
+  "validation_messages": {
+    "${1:field}": {
+      "${2:error}": "${3:description}"
+    }
+  }
+}
+"""
+]]></content>
+    <tabTrigger>validb</tabTrigger>
+    <description>api failed validation json:</description>
+</snippet>

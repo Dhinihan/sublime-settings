@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+namespace Application\Filter;
+
+use PandoraBase\EntityManager\EntityManagerAwareInterface;
+use PandoraBase\EntityManager\EntityManagerAwareTrait;
+use Zend\InputFilter\InputFilter;
+
+class ${1:FilterName} extends InputFilter implements EntityManagerAwareInterface
+{
+    use EntityManagerAwareTrait;
+
+    public function init()
+    {
+    }
+}
+
+]]></content>
+    <tabTrigger>filter</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

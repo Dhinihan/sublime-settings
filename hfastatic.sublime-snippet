@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+<div class="form-group">
+  <label class="col-sm-${1:3} control-label">${2:field}: </label>
+  <div class="col-sm-${3:9}">
+    <p class="form-control-static">{{${4:field}}}</p>
+  </div>
+</div>
+]]></content>
+    <tabTrigger>hfastatic</tabTrigger>
+    <!-- <scope>source.html</scope> -->
+</snippet>

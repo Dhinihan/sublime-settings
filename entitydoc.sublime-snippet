@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+namespace Application\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use PandoraBase\Entity\AbstractEntity;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="${1:table}")
+ */
+class ${2:EntityName} extends AbstractEntity
+{
+}
+
+]]></content>
+    <tabTrigger>entitydoc</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

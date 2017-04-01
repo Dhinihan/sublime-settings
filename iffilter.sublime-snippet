@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(array(
+    'type' => 'Application\InputFilter\\${1/(.+)/\u$1/g}',
+), '${1:filter}');
+]]></content>
+    <tabTrigger>iffilter</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

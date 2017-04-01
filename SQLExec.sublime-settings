@@ -1,0 +1,11 @@
+{
+  "connections": {
+    "bcp": {
+      "type": "pgsql",
+      "host": "testes.completo.com.br",
+      "port": 5432,
+      "username": "postgres",
+      "database": "sas600bcp"
+    }
+  }
+}

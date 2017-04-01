@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+And the response should contain json with at least these fields:
+]]></content>
+    <tabTrigger>jsonb</tabTrigger>
+    <description>And the response should contain json with at least these fields:</description>
+</snippet>

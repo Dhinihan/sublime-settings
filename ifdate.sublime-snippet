@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(array(
+    'name' => '${1:name}',
+    'required' => ${2:false},
+    'filters' => array(
+        array(
+            'name' => 'DateTimeApi',
+        ),
+    ),
+    'validators' => array(
+        array(
+            'name' => 'Date',
+            'options' => array(
+                'message' => "O campo '${3:campo}' deve ser formatado da seguinte forma: aaaa-mm-dd",
+            ),
+        ),
+    ),
+));
+]]></content>
+    <tabTrigger>ifdate</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

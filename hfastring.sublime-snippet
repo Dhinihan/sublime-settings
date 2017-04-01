@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<div class="form-group" pan-has-error="${1:field}">
+  <label for="${1:field}" class="col-sm-${2:3} control-label">${3:label}</label>
+  <div class="col-sm-${4:9}">
+    <input type="text" class="form-control" id="${1:field}" name="${1:field}" ng-model="${5:entidade}.${1:field}" required>
+    <ng-messages for="${6:form}.${1:field}.\$error" pan-show-error="${1:field}">
+      <ng-message when="required" class="control-label"> O campo ${3:label} é obrigatório</ng-message>
+    </ng-messages>
+  </div>
+</div>
+]]></content>
+    <tabTrigger>hfastring</tabTrigger>
+    <!-- <scope>source.html</scope> -->
+</snippet>

@@ -1,0 +1,11 @@
+{
+  "show_debug": false,
+  "php_cs_fixer_on_save": false,
+  "php_cs_fixer_executable_path": "/usr/local/bin/php-cs-fixer",
+  "phpcbf_executable_path": "/usr/bin/phpcbf",
+  "php_cs_fixer_additional_args": {
+    // "--fixers":"align_double_arrow,psr0,align_equals,phpdoc_indent,multiline_array_trailing_comma,unused_use,ordered_use,single_line_after_imports",
+    "--fixers":"psr0,phpdoc_indent,multiline_array_trailing_comma,unused_use,ordered_use,single_line_after_imports",
+    "--level":"psr2"
+  }
+}

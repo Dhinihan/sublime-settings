@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(array(
+    'name' => '${1:name}',
+    'required' => ${2:false}
+));
+]]></content>
+    <tabTrigger>ifsimple</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

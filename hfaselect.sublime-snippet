@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+<div class="form-group" pan-has-error="${1:field}">
+  <label for="${1:field}" class="col-sm-${2:3} control-label">${3:label}: </label>
+  <div class="col-sm-${4:9}">
+    <select ng-model="${5:entidade}.${1:field}" name="${1:field}" id="${1:field}" ng-options="${6:object} as ${6:object} for ${6:object} in ${6:object}s"
+      class="form-control" required>
+      <option value=""></option>
+    </select>
+    <ng-messages for="${7:form}.${1:field}.\$error" pan-show-error="${1:field}">
+      <ng-message class="control-label" when="required">O campo ${3:label} é obrigatório</ng-message>
+    </ng-messages>
+  </div>
+</div>
+]]></content>
+    <tabTrigger>hfaselect</tabTrigger>
+    <!-- <scope>source.html</scope> -->
+</snippet>

@@ -1,0 +1,36 @@
+<snippet>
+    <content><![CDATA[
+\$this->add(array(
+    'name' => '${1:name}',
+    'required' => ${2:false},
+    'filters' => array(
+        array(
+            'name' => 'StripTags'
+        ),
+        array(
+            'name' => 'StringTrim'
+        ),
+    ),
+    'validators' => array(
+        array(
+            'name' => 'Between',
+            'options' => array(
+                'min' => ${3:min},
+                'max' => ${4:max},
+                'inclusive' => ${5:true},
+                'message' => "O ${6:campo} deve estar entre ${3:min} e ${4:max}"
+            ),
+        ),
+        array(
+            'name' => 'Float',
+            'options' => array(
+                'locale' => 'en_US',
+                'message' => "O ${6:campo} não parece ser um número"
+            ),
+        ),
+    ),
+));
+]]></content>
+    <tabTrigger>ifnumber</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

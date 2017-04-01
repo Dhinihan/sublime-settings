@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+public function get${1/(.+)/\u$1/g}()
+{
+    return \$this->${1:$SELECTION};
+}
+
+public function set${1/(.+)/\u$1/g}(\$${1:$SELECTION})
+{
+    \$this->${1:$SELECTION} = \$${1:$SELECTION};
+    return \$this;
+}
+
+]]></content>
+	<tabTrigger>gas</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

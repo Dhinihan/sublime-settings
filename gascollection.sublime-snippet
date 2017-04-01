@@ -1,0 +1,39 @@
+<snippet>
+    <content><![CDATA[
+public function get${1/(.+)/\u$1/g}()
+{
+    if (\$this->${1:colecao} == null) {
+        return array();
+    }
+
+    \$criteria = Criteria::create()->orderBy(array('${5:seq}' => Criteria::ASC));
+    return \$this->${1:colecao}->matching(\$criteria);
+}
+
+public function add${1/(.+)/\u$1/g}(ArrayCollection \$nov${4:o}s${1/(.+)/\u$1/g})
+{
+    if (!\$this->${1:colecao}) {
+        \$this->${1:colecao} = new ArrayCollection();
+    }
+
+    foreach (\$nov${4:o}s${1/(.+)/\u$1/g} as \$${2:entidade}Nov${4:o}) {
+        \$${2:entidade}Nov${4:o}->set${3:Pai}(\$this);
+        \$this->${1:colecao}->add(\$${2:entidade}Nov${4:o});
+    }
+}
+
+public function remove${1/(.+)/\u$1/g}(ArrayCollection \$${1:colecao}Removid${4:o}s)
+{
+    foreach (\$${1:colecao}Removid${4:o}s as \$${2:entidade}Removid${4:o}) {
+        foreach (\$this->${1:colecao}->getValues() as \$id => \$value) {
+            if (\$value->get${5/(.+)/\u$1/g}() == \$${2:entidade}Removid${4:o}->get${5/(.+)/\u$1/g}()) {
+                \$this->${1:colecao}->remove(\$id);
+            }
+        }
+    }
+}
+
+]]></content>
+    <tabTrigger>gascollection</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

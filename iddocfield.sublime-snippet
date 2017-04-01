@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+* @ORM\Id
+* @ORM\GeneratedValue(strategy="AUTO")
+]]></content>
+    <tabTrigger>iddocfield</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

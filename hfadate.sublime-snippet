@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+<div class="form-group" pan-has-error="${1:field}">
+  <label for="${1:field}" class="col-sm-${2:3} control-label">${3:label}: </label>
+  <div class="col-sm-${4:9}">
+    <div class="input-group">
+      <input type="text" class="form-control" name="${1:field}" id="${1:field}" ng-model="${5:entidade}.${1:field}"
+        uib-datepicker-popup="dd/MM/yyyy" is-open="${1:field}.opened" close-text="Fechar"
+        current-text="Hoje" clear-text="Limpar" required api-date pan-time-zone pan-auto-slash="##/##/####">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default" ng-click="${1:field}.opened = !${1:field}.opened">
+          <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+      </div>
+    </div>
+    <ng-messages for="${1:form}.${1:field}.\$error" pan-show-error="${1:field}">
+      <ng-message class="control-label" when="required">O campo ${3:label} é obrigatório</ng-message>
+      <ng-message class="control-label" when="date">O campo ${3:label} deve ter o seguinte formato: dd/mm/aaaa</ng-message>
+    </ng-messages>
+  </div>
+</div>
+]]></content>
+    <tabTrigger>hfadate</tabTrigger>
+    <!-- <scope>source.html</scope> -->
+</snippet>

@@ -1,0 +1,97 @@
+<snippet>
+    <content><![CDATA[
+return array(
+    'router' => array(
+        'routes' => array(
+            'api' => array(
+                'child_routes' => array(
+                    '${1/(.*)/\L\1\E/i}' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => '/${3:collection}[/:${1/(.*)/\L\1\E/i}_id]',
+                            'defaults' => array(
+                                'controller' => 'Api\\${1:Entidade}\Controller',
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
+    'zf-rest' => array(
+        'Api\\${1:Entidade}\Controller' => array(
+            'listener' => 'Api\\${1:Entidade}\\${1:Entidade}Resource',
+            'route_name' => 'api/${1/(.*)/\L\1\E/i}',
+            'route_identifier_name' => '${1/(.*)/\L\1\E/i}_id',
+            'entity_identifier_name' => '${2:id}',
+            'collection_name' => '${3:collection}',
+            'entity_http_methods' => array(
+                'GET',
+                'DELETE',
+                'PATCH',
+                'PUT',
+            ),
+            'collection_http_methods' => array(
+                'GET',
+                'POST',
+            ),
+            'collection_query_whitelist' => array(),
+            'page_size' => 50,
+            'page_size_param' => 'limit',
+            'entity_class' => 'Application\Entity\\${1:Entidade}',
+            'collection_class' => 'Api\\${1:Entidade}\\${1:Entidade}Collection',
+        ),
+    ),
+    'zf-content-negotiation' => array(
+        'controllers' => array(
+            'Api\\${1:Entidade}\Controller' => 'HalJson',
+        ),
+        'content_type_whitelist' => array(
+            'Api\\${1:Entidade}\Controller' => array(
+                'application/json',
+            ),
+        ),
+    ),
+    'doctrine-hydrator' => array(
+        '${1:Entidade}Hydrator' => array(
+            'entity_class' => 'Application\Entity\\${1:Entidade}',
+            'object_manager' => 'doctrine.entitymanager.orm_default',
+            'by_value' => true,
+            'strategies' => array(),
+        ),
+    ),
+    'zf-hal' => array(
+        'metadata_map' => array(
+            'Application\Entity\\${1:Entidade}' => array(
+                'route_identifier_name' => '${1/(.*)/\L\1\E/i}_id',
+                'entity_identifier_name' => '${2:id}',
+                'route_name' => 'api/${1/(.*)/\L\1\E/i}',
+                'hydrator' => '${1:Entidade}Hydrator',
+            ),
+            'Api\\${1:Entidade}\\${1:Entidade}Collection' => array(
+                'entity_identifier_name' => '${2:id}',
+                'route_name' => 'api/${1/(.*)/\L\1\E/i}',
+                'is_collection' => true,
+            ),
+        ),
+    ),
+    'zf-apigility' => array(
+        'doctrine-connected' => array(
+            'Api\\${1:Entidade}\\${1:Entidade}Resource' => array(
+                'object_manager' => 'doctrine.entitymanager.orm_default',
+                'hydrator' => '${1:Entidade}Hydrator',
+                // 'query_providers' => array(
+                //     'default' => 'Api\\${1:Entidade}\\${1:Entidade}Query',
+                // ),
+                // 'listeners' => array(
+                //     'Api\\${1:Entidade}\\${1:Entidade}Listener',
+                // ),
+            ),
+        ),
+    ),
+);
+
+]]></content>
+    <tabTrigger>configapi</tabTrigger>
+    <scope>source.php</scope>
+</snippet>
